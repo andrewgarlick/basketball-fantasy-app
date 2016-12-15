@@ -1,0 +1,18 @@
+<p>
+  2016-17 Depth Charts
+</p>
+<input #box [(ngModel)]="team">
+<button (click)="searchclicked()">Search</button>
+
+<ul>
+  <li *ngFor="let position of players">
+    {{position.$position}}
+    <ul>
+      <li *ngFor="let player of position.Player">
+        {{player.name}} - {{player.team}}
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
